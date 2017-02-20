@@ -8,6 +8,7 @@ class Note:
   FLAT  = ["♭"]
 
   def __init__(self, name):
+    # Todo: Change # into real sharps, and change b into real flats
     self.name = name
 
   def is_sharp(self):
@@ -31,3 +32,4 @@ class Note:
 
   def setName(self, name):
     self.name = name
+
