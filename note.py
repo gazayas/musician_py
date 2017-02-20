@@ -12,9 +12,12 @@ class Note:
     self.name = name
 
   def is_sharp(self):
-    pattern = r"♯"
-    result = re.search(pattern, self.name)
-    if result:
+    # Todo: This doesn't look good; there must be a simpler way
+    pattern1 = r"♯"
+    result1 = re.search(pattern1, self.name)
+    pattern2 = r"#"
+    result2 = re.search(pattern2, self.name)
+    if result1 or result2:
       return True
     else:
       return False
@@ -32,4 +35,7 @@ class Note:
 
   def setName(self, name):
     self.name = name
+
+sharp_note = Note("A#")
+print(sharp_note.is_sharp())
 
